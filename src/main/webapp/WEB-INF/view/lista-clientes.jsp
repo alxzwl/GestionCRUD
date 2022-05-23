@@ -22,11 +22,15 @@
 			<c:url var="linkActualizar" value="/cliente/muestraFormularioActualizar">
 				<c:param name="clienteId" value="${clienteTemp.id}"></c:param>
 			</c:url>
+			<c:url var="linkEliminar" value="/cliente/eliminar">
+				<c:param name="clienteId" value="${clienteTemp.id}"></c:param>
+			</c:url>
 			<tr>
 				<td>${clienteTemp.nombre }</td>
 				<td>${clienteTemp.apellidos }</td>
 				<td>${clienteTemp.email}</td>
 				<td href="${linkActualizar}"><input type="button" value="Modificar"></td>
+				<td href="${linkEliminar}"><input type="button" value="Eliminar" onClick="if(!(confirm('Vas a eliminar un registro \nEstas Seguro?'))) return false"></td>
 			</tr>
 		</c:forEach>
 	</table>

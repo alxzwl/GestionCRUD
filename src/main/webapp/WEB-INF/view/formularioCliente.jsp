@@ -10,22 +10,19 @@
 <body>
 
 	<form:form action="insertarCliente" modelAttribute="cliente" method="POST">
+		<td><form:hidden path="id" /></td>
 		<table>
 			<tr>
-				<td>Id</td>
-				<td><form:input path="Id" /></td>
-			</tr>
-			<tr>
 				<td>Nombre</td>
-				<td><form:input path="Nombre" /></td>
+				<td><form:input path="nombre" /></td>
 			</tr>
 			<tr>
 				<td>Apellidos</td>
-				<td><form:input path="Apellidos" /></td>
+				<td><form:input path="apellidos" /></td>
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><form:input path="Email" /></td>
+				<td><form:input path="email" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Insertar"></td>

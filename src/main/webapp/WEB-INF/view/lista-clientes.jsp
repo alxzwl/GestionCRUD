@@ -19,10 +19,14 @@
 		<th>Email</th>
 		</tr>
 		<c:forEach var="clienteTemp" items="${clientes }">
+			<c:url var="linkActualizar" value="/cliente/muestraFormularioActualizar">
+				<c:param name="clienteId" value="${clienteTemp.id}"></c:param>
+			</c:url>
 			<tr>
 				<td>${clienteTemp.nombre }</td>
 				<td>${clienteTemp.apellidos }</td>
 				<td>${clienteTemp.email}</td>
+				<td href="${linkActualizar}"><input type="button" value="Modificar"></td>
 			</tr>
 		</c:forEach>
 	</table>

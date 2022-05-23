@@ -40,7 +40,18 @@ public class ClienteDAOClase implements ClienteDAO {
 		// Insertar el cliente en BBDD
 		miSession.save(elCliente);
 		
-		miSession.beginTransaction();
+	}
+
+	@Override
+	@Transactional
+	public Cliente getCliente(int id) {
+		// Obtener la session
+		Session miSession = sessionFactory.getCurrentSession();
+		
+		// Obtener la informacion del cliente seleccionado
+		Cliente elCliente = miSession.get(Cliente.class, id);
+		
+		return elCliente;
 	}
 
 }

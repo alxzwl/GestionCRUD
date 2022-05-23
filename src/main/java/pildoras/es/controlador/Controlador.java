@@ -1,4 +1,4 @@
-package controlador;
+package pildoras.es.controlador;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

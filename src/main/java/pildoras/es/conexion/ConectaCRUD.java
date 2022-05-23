@@ -1,4 +1,4 @@
-package conexion.com;
+package pildoras.es.conexion;
 
 import java.io.IOException;
 import java.io.PrintWriter;
